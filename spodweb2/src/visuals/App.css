@@ -1,38 +1,236 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  --green-900: #102913;
+  --green-800: #1f4d2f;
+  --green-700: #2f7a4f;
+  --green-600: #4e7e65;
+  --muted: rgba(255,255,255,0.06);
+  --accent: #a7ffb5;
+  font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  color: #eef5ee;
+  background-color: #0b1a12;
+  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--green-900);
+  height: 80px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0 1.25rem;
+  color: var(--accent);
+}
+
+.App-footer {
+  background-color: var(--green-900);
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0 1.25rem;
+  color: var(--accent);
+}
+
+.App-logo {
+  width: 5rem;
+  height: auto;
+  display: block;
+}
+
+.App-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--accent);
+}
+
+.App-body {
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(16,41,19,0.6) 0%, rgba(7,18,12,1) 100%);
+  color: #eaf7ec;
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--accent);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cadastro-button {
+  background-color: var(--green-700);
+  color: #f6fff6;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .18s ease;
+}
+
+.excluir-button {
+  background-color: #b32e2e;
+  color: #f6fff6;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .18s ease;
+}
+
+.alterar-button {
+  background-color: #2e6fb3;
+  color: #f6fff6;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .18s ease;
+}
+
+.text-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  background-color: rgba(255,255,255,0.02);
+  color: #eef5ee;
+  margin-bottom: 1rem;
+}
+
+/* Catalog layout */
+.catalogo {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.game-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.game-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.game-card .info {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.game-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #eef5ee;
+}
+
+.game-meta {
+  font-size: 0.85rem;
+  color: rgba(234,247,236,0.8);
+}
+
+.game-price {
+  margin-top: auto;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Carousel */
+.carrossel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.carrossel > .item {
+  min-width: 240px;
+  scroll-snap-align: center;
+}
+
+.carrossel .item .preview {
+  border-radius: 6px;
+  overflow: hidden;
+  height: 140px;
+}
+
+/* Table style for lists */
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  color: #eaf7ec;
+}
+
+.tabela th,
+.tabela td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.tabela thead th {
+  text-align: left;
+  background: linear-gradient(180deg, var(--green-800), var(--green-700));
+  color: #f6fff6;
+  font-weight: 700;
+}
+
+.tabela tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.01);
+}
+
+.tabela .price {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .game-card img { height: 160px; }
+  .App-header { height: 64px; padding: 0 0.75rem; }
+  .App-name { font-size: 1.1rem; }
+  .catalogo-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+}
+
+@media (max-width: 420px) {
+  .game-card img { height: 140px; }
+  .carrossel > .item { min-width: 180px; }
+}
+
+.jogo-cover {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
