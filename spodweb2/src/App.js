@@ -8,6 +8,7 @@ import Rodape from "./components/Rodape";
 import Home from "./pages/Home";
 import Acao from "./pages/Acao";
 import RPG from "./pages/RPG";
+import Terror from "./pages/Terror";
 import Corrida from "./pages/Corrida";
 import Catalogo from "./pages/Catalogo";
 import JogoDetalhes from "./pages/JogoDetalhes";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/acao" element={<Acao />} />
         <Route path="/rpg" element={<RPG />} />
+        <Route path="/terror" element={<Terror />} />
         <Route path="/corrida" element={<Corrida />} />
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/jogo/:slug" element={<JogoDetalhes />} />

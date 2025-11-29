@@ -7,6 +7,16 @@ function Home() {
   const [jogos, setJogos] = useState([]);
 
   useEffect(() => {
+    const stored = localStorage.getItem("jogos");
+    if (stored) {
+      try {
+        setJogos(JSON.parse(stored));
+        return;
+      } catch (e) {
+        // ignore and fall back to fetch
+      }
+    }
+
     axios.get("/api/jogos.json").then((res) => setJogos(res.data));
   }, []);
 

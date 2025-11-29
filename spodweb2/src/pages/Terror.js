@@ -3,18 +3,18 @@ import axios from "axios";
 import CardJogo from "../components/CardJogo";
 import "../visuals/App.css";
 
-function RPG() {
+function Terror() {
   const [jogos, setJogos] = useState([]);
 
   useEffect(() => {
     axios.get("/api/jogos.json").then((res) => {
-      setJogos(res.data.filter((j) => j.genero === "RPG"));
+      setJogos(res.data.filter((j) => j.genero === "Terror"));
     });
   }, []);
 
   return (
     <main>
-      <h1>Jogos de RPG</h1>
+      <h1>Jogos de Terror</h1>
       <div className="carrossel">
         {jogos.map((j) => (
           <CardJogo key={j.id} jogo={j} />
@@ -24,4 +24,4 @@ function RPG() {
   );
 }
 
-export default RPG;
+export default Terror;

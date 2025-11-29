@@ -1,7 +1,7 @@
 function Rodape() {
   return (
     <footer className="App-footer">
-      <p>Catálogo de Jogos — Projeto React SPODWE2</p>
+      <p>DIESEL GAMES TM - 1.0 - 2025 - Todos os direitos reservados</p>
     </footer>
   );
 }

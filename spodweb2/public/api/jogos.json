@@ -25,5 +25,23 @@
     "preco": 299.90,
     "descricao": "Dirija pelos cenários mais belos do México neste simulador de corrida.",
     "capa": "/imgs/forza5.jpg"
+  },
+  {
+    "id": 4,
+    "slug": "silksong",
+    "nome": "Hollow Knight: Silksong",
+    "genero": "RPG",
+    "preco": 49.90,
+    "descricao": "A nova sequel de Hollow Knight te leva para as profundezas novamente.",
+    "capa": "/imgs/silksong.webp"
+  },
+  {
+    "id": 5,
+    "slug": "aila",
+    "nome": "A.I.L.A",
+    "genero": "Terror",
+    "preco": 79.95,
+    "descricao": "Um jogo de terror psicológico com uma narrativa envolvente.",
+    "capa": "/imgs/aila.jpg"
   }
 ]
