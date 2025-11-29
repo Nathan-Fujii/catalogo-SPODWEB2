@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CardJogo from "../components/CardJogo";
+import "../visuals/App.css";
 
 function RPG() {
   const [jogos, setJogos] = useState([]);

@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import "./visuals/App.css";
 
 import Topo from "./components/Topo";
 import Rodape from "./components/Rodape";
@@ -15,7 +16,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Topo />
 
       <Routes>
@@ -30,7 +31,7 @@ function App() {
       </Routes>
 
       <Rodape />
-    </>
+    </div>
   );
 }
 

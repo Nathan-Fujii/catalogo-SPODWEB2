@@ -21,10 +21,12 @@ function TabelaJogos({ jogos, excluir }) {
             <td>{jogo.genero}</td>
             <td>R$ {jogo.preco.toFixed(2)}</td>
             <td>
-              <Link to={`/alterar/${jogo.id}`} className="btn-editar">
-                Alterar
-              </Link>
-              <button className="btn-excluir" onClick={() => excluir(jogo.id)}>
+              <button className="alterar-button">
+                <Link to={`/alterar/${jogo.id}`} style={{color: "white"}}>
+                  Alterar
+                </Link>
+              </button>
+              <button className="excluir-button" onClick={() => excluir(jogo.id)}>
                 Excluir
               </button>
             </td>

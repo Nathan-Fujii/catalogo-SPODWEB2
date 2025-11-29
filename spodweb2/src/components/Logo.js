@@ -1,10 +1,9 @@
 import logo from "../assets/imgs/logo.png";
+import "../visuals/App.css"
 
 function Logo() {
   return (
-    <div className="logo">
-      <img src={logo} alt="Logo do site" />
-    </div>
+    <img src={logo} alt="Logo do site" className="App-logo" />
   );
 }
 

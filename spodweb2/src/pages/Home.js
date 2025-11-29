@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CardJogo from "../components/CardJogo";
+import "../visuals/App.css";
 
 function Home() {
   const [jogos, setJogos] = useState([]);
@@ -10,12 +11,12 @@ function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="App-body">
       <h1>Jogos em Destaque</h1>
 
-      <div className="lista">
+      <div className="carrossel">
         {jogos.map((j) => (
-          <CardJogo key={j.id} jogo={j} />
+          <CardJogo capa={j.capa} key={j.id} jogo={j} />
         ))}
       </div>
     </main>

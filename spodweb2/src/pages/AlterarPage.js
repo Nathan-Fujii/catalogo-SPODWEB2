@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AlterarJogo from "../components/AlterarJogo";
+import "../visuals/App.css";
 
 function AlterarPage() {
   const { id } = useParams();

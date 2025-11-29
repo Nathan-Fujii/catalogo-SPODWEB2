@@ -6,7 +6,7 @@
     "genero": "RPG",
     "preco": 249.90,
     "descricao": "Um RPG de ação em mundo aberto desenvolvido pela FromSoftware.",
-    "capa": "/imgs/eldenring.jpg"
+    "capa": "./imgs/eldenring.webp"
   },
   {
     "id": 2,

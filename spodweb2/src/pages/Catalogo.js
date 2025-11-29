@@ -3,6 +3,7 @@ import axios from "axios";
 import MenuTabela from "../components/MenuTabela";
 import TabelaJogos from "../components/TabelaJogos";
 import CadastroJogo from "../components/CadastroJogo";
+import "../visuals/App.css";
 
 function Catalogo() {
   const [jogos, setJogos] = useState([]);

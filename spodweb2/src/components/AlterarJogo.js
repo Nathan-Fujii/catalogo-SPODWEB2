@@ -29,13 +29,13 @@ function AlterarJogo({ jogo, salvarAlteracoes }) {
     <form className="formulario" onSubmit={salvar}>
       <h2>Alterar Jogo</h2>
 
-      <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+      <input className="text-input" type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
 
-      <input type="text" value={genero} onChange={(e) => setGenero(e.target.value)} />
+      <input className="text-input" type="text" value={genero} onChange={(e) => setGenero(e.target.value)} />
 
-      <input type="number" value={preco} onChange={(e) => setPreco(e.target.value)} />
+      <input className="text-input" type="number" value={preco} onChange={(e) => setPreco(e.target.value)} />
 
-      <button type="submit">Salvar alterações</button>
+      <button className="cadastro-button" type="submit">Salvar alterações</button>
     </form>
   );
 }

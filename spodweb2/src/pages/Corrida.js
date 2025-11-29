@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CardJogo from "../components/CardJogo";
+import "../visuals/App.css";
 
 function Corrida() {
   const [lista, setLista] = useState([]);
